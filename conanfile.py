@@ -79,6 +79,8 @@ class LibpqxxRecipe(ConanFile):
         else:
             cmake.definitions["SKIP_PQXX_SHARED"] = "ON"
 
+        cmake.definitions["SKIP_BUILD_TEST"] = "ON"
+
         cmake.configure()
         return cmake
 

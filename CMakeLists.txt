@@ -21,8 +21,5 @@ if (WIN32)
 endif()
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 14)
-if (WIN32 AND MSVC AND BUILD_SHARED_LIBS)
-    set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
-endif()
 
 add_subdirectory(source_subfolder)

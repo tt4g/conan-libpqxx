@@ -8,10 +8,6 @@ if (BUILD_SHARED_LIBS AND WIN32)
     list(APPEND CXX_SOURCES "${CMAKE_SOURCE_DIR}/source_subfolder/win32/libpqxx.cxx")
 endif()
 
-if (BUILD_SHARED_LIBS)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC -DPQXX_SHARED)
-endif()
-
 if (WIN32)
     target_compile_definitions(${PROJECT_NAME} PUBLIC WIN32 _MBCS _WINDOWS PQXX_INTERNAL NOMINMAX)
 endif()

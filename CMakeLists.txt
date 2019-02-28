@@ -11,7 +11,3 @@ add_subdirectory(source_subfolder)
 if (WIN32)
     add_definitions(-DWIN32 -D_MBCS -D_WINDOWS -DPQXX_INTERNAL -DNOMINMAX)
 endif()
-
-if (BUILD_SHARED_LIBS AND WIN32)
-    target_sources(libpqxx PUBLIC "${CMAKE_SOURCE_DIR}/source_subfolder/win32/libpqxx.cxx")
-endif()
